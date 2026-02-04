@@ -22,6 +22,14 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Debug secrets presence
+        run: |
+          if [ -z "${{ secrets.SSH_KEY }}" ]; then echo "SSH_KEY is EMPTY"; else echo "SSH_KEY is SET"; fi
+          if [ -z "${{ secrets.SSH_HOST }}" ]; then echo "SSH_HOST is EMPTY"; else echo "SSH_HOST is SET"; fi
+          if [ -z "${{ secrets.SSH_USER }}" ]; then echo "SSH_USER is EMPTY"; else echo "SSH_USER is SET"; fi
+          if [ -z "${{ secrets.SSH_PORT }}" ]; then echo "SSH_PORT is EMPTY"; else echo "SSH_PORT is SET"; fi
+          if [ -z "${{ secrets.DEPLOY_PATH }}" ]; then echo "DEPLOY_PATH is EMPTY"; else echo "DEPLOY_PATH is SET"; fi
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
@@ -50,7 +58,3 @@ jobs:
             -e "ssh -p ${{ secrets.SSH_PORT }}" \
             public/ \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/
-      - name: Debug secrets presence
-        run: |
-          if [ -z "${{ secrets.SSH_KEY }}" ]; then echo "SSH_KEY is EMPTY"; else echo "SSH_KEY is SET"; fi
-          if [ -z "${{ secrets.SSH_HOST }}" ]; then echo "SSH_HOST is EMPTY"; else echo "SSH_HOST is SET"; fi
