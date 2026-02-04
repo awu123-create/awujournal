@@ -50,3 +50,7 @@ jobs:
             -e "ssh -p ${{ secrets.SSH_PORT }}" \
             public/ \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/
+      - name: Debug secrets presence
+        run: |
+          if [ -z "${{ secrets.SSH_KEY }}" ]; then echo "SSH_KEY is EMPTY"; else echo "SSH_KEY is SET"; fi
+          if [ -z "${{ secrets.SSH_HOST }}" ]; then echo "SSH_HOST is EMPTY"; else echo "SSH_HOST is SET"; fi
