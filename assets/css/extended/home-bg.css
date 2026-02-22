@@ -1,0 +1,11 @@
+/* 仅首页：很多 PaperMod 版本首页 body 会有 .home */
+body.home {
+    background: url("/images/IMG_5550.PNG") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* 可选：提高文字可读性 */
+body.home .main {
+    background: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(6px);
+}
