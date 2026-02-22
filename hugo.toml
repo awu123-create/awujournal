@@ -78,7 +78,6 @@ name = "email"
 url = "mailto:zzy060103@gmail.com"
 title = "发送邮件"
 
-# 菜单配置
 [menu]
 
 [[menu.main]]
