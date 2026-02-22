@@ -3,7 +3,6 @@ languageCode = "zh-cn"
 title = "啊呜的个人博客"
 theme = "PaperMod"
 
-# 启用 emoji 支持
 enableEmoji = true
 
 # 启用 robots.txt
