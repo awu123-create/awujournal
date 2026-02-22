@@ -36,6 +36,9 @@ ShowRssButtonInSectionTermList = true
 ShowSearch = true
 comments = true
 
+[params.busuanzi]
+enable = true # 是否启动Busuanzi统计
+
 [params.giscus]
 repo = "awu123-create/awujournal"
 repoId = "R_kgDORV4A_A"
