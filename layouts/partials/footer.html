@@ -1,0 +1,12 @@
+<footer class="footer">
+    <span>© {{ now.Format "2006" }} {{ site.Title }}</span>
+    {{ with site.Params.beian }}
+    <span style="margin: 0 8px;">·</span>
+    <span>
+        <a href="{{ site.Params.beianLink | default " https://beian.miit.gov.cn/" }}" rel="noopener noreferrer"
+            target="_blank">
+            {{ . }}
+        </a>
+    </span>
+    {{ end }}
+</footer>

@@ -1,0 +1,116 @@
+baseURL = "http://localhost:1313/" # 改成你的域名
+languageCode = "zh-cn"
+title = "啊呜的个人博客"
+theme = "PaperMod"
+
+# 启用 emoji 支持
+enableEmoji = true
+
+# 启用 robots.txt
+enableRobotsTXT = true
+
+# 每页显示的文章数
+[pagination]
+pagerSize = 10
+
+# 语言设置
+[languages.zh]
+languageName = "中文"
+weight = 1
+
+# PaperMod 主题配置
+[params]
+# 基础信息
+author = "啊呜"
+description = ""
+beian = "粤ICP备2026003159号"
+beianLink = "https://beian.miit.gov.cn/"
+
+# 显示设置
+ShowReadingTime = true      # 显示阅读时间
+ShowShareButtons = true     # 显示分享按钮
+ShowPostNavLinks = true     # 显示上一篇/下一篇
+ShowBreadCrumbs = true      # 显示面包屑导航
+ShowCodeCopyButtons = true  # 显示代码复制按钮
+ShowWordCount = true        # 显示字数统计
+ShowRssButtonInSectionTermList = true
+ShowSearch = true
+comments = true
+
+[params.giscus]
+repo = "awu123-create/awujournal"
+repoId = "R_kgDORV4A_A"
+category = "General"
+categoryId = "DIC_kwDORV4A_M4C29i0"
+mapping = "pathname"
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "top"
+theme = "preferred_color_scheme"
+lang = "zh-CN"
+loading = "lazy"
+
+# Profile 模式（你选的这个）
+[params.profileMode]
+enabled = true
+title = "My Wilderness"     # 主标题
+subtitle = "记录、思考、探索"
+imageUrl = "/images/IMG_5789.jpg" # 头像路径
+imageWidth = 120
+imageHeight = 120
+
+[[params.profileMode.buttons]]
+name = "首页"
+url = "/"
+
+[[params.profileMode.buttons]]
+name = "关于"
+url = "/about/"
+
+# 社交图标
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/awu123-create"
+title = "访问我的 GitHub"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:zzy060103@gmail.com"
+title = "发送邮件"
+
+# 菜单配置
+[menu]
+
+[[menu.main]]
+identifier = "posts"
+name = "随笔"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+identifier = "notes"
+name = "笔记"
+url = "/notes/"
+weight = 20
+
+[[menu.main]]
+identifier = "about"
+name = "关于"
+url = "/about/"
+weight = 30
+
+[[menu.main]]
+identifier = "archives"
+name = "归档"
+url = "/archives/"
+weight = 40
+
+[[menu.main]]
+identifier = "search"
+name = "搜索"
+url = "/search/"
+weight = 50
+
+# 输出格式（用于搜索功能）
+[outputs]
+home = ["HTML", "RSS", "JSON"]

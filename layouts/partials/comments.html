@@ -1,0 +1,29 @@
+{{- if .Params.comments | default site.Params.comments -}}
+  {{- $g := site.Params.giscus -}}
+
+  {{- $mapping := $g.mapping | default `pathname` -}}
+  {{- $reactionsEnabled := $g.reactionsEnabled | default `1` -}}
+  {{- $emitMetadata := $g.emitMetadata | default `0` -}}
+  {{- $inputPosition := $g.inputPosition | default `top` -}}
+  {{- $theme := $g.theme | default `preferred_color_scheme` -}}
+  {{- $lang := $g.lang | default `zh-CN` -}}
+  {{- $loading := $g.loading | default `lazy` -}}
+
+  <div class="giscus"></div>
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ $g.repo }}"
+    data-repo-id="{{ $g.repoId }}"
+    data-category="{{ $g.category }}"
+    data-category-id="{{ $g.categoryId }}"
+    data-mapping="{{ $mapping }}"
+    data-strict="0"
+    data-reactions-enabled="{{ $reactionsEnabled }}"
+    data-emit-metadata="{{ $emitMetadata }}"
+    data-input-position="{{ $inputPosition }}"
+    data-theme="{{ $theme }}"
+    data-lang="{{ $lang }}"
+    data-loading="{{ $loading }}"
+    crossorigin="anonymous"
+    async>
+  </script>
+{{- end -}}
