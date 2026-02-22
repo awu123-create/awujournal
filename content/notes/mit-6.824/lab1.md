@@ -5,7 +5,7 @@ title = 'Lab1 MapReduce'
 tags = ["mit6.824", "mapreduce", "lab"]
 categories = ["MIT 6.824", "Distributed Systems"]
 weight = 1
-description = "实现一个简化版 MapReduce：Coordinator/Worker、任务分配、容错与超时处理。"
+description = "实现一个简化版 MapReduce：Master/Worker、任务分配、容错与超时处理。"
 showToc = true
 comments = true
 +++
